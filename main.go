@@ -59,6 +59,7 @@ func Draw(keys []int, builds map[int]Build){
 func main() {
 	numOfBuilds := flag.Int("builds", 100, "number of build to generate")
 	toDraw := flag.Bool("draw", true, "to draw builds ")
+	flag.Parse();
 	builds:= GenerateBuild(*numOfBuilds)
 	
 	play(builds, *toDraw)
